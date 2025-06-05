@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bat8soe1nsltq"]
+
+[ext_resource type="Script" path="res://Scripts/fusionmenu.gd" id="1_qvnki"]
+
+[node name="FusionMenu" type="Control"]
+layout_mode = 3
+anchor_left = 0.787
+anchor_top = 0.837
+anchor_right = 0.787
+anchor_bottom = 0.837
+script = ExtResource("1_qvnki")
+
+[node name="CardContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqi8tu4wx6l63"]
+
+[ext_resource type="Texture2D" uid="uid://d3hd1luw66lrb" path="res://Assets/Bluebar.png" id="1_dlpin"]
+
+[node name="ManaBar" type="Node2D"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 779.0
+offset_bottom = 779.0
+texture_progress = ExtResource("1_dlpin")
+tint_under = Color(0.478921, 0.776137, 0.872082, 1)
+tint_over = Color(0.807484, 0.594951, 0.513421, 1)
+tint_progress = Color(0.404751, 0.226261, 0.459276, 1)

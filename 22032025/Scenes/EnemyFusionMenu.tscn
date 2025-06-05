@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://mc67sehxfbq6"]
+
+[ext_resource type="Script" path="res://Scripts/enemyfusionmenu.gd" id="1_klgra"]
+
+[node name="EnemyFusionMenu" type="Control"]
+layout_mode = 3
+anchor_left = 0.787
+anchor_top = 0.837
+anchor_right = 0.787
+anchor_bottom = 0.837
+offset_left = -0.199951
+offset_top = -0.299988
+offset_right = -0.199951
+offset_bottom = -0.299988
+script = ExtResource("1_klgra")
+
+[node name="CardContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -1147.2
+offset_top = -667.3
+offset_right = -1107.2
+offset_bottom = -627.3

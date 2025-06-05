@@ -1,0 +1,185 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=37 format=3 uid="uid://c2no7j7phne6e"]
+
+[ext_resource type="Texture2D" uid="uid://cvexe8bjshtn7" path="res://Assets/DALL·E 2025-02-10 18.40.06 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a hulking, fat, and .webp" id="1_1who4"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_6js6t"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_34103"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_gn0kt"]
+[ext_resource type="Texture2D" uid="uid://du42mggey71eg" path="res://render 1/0001.png" id="3_hk4h5"]
+[ext_resource type="Texture2D" uid="uid://dwmll1m8232l" path="res://render 1/0003.png" id="4_1mpaw"]
+[ext_resource type="Texture2D" uid="uid://frynecljxxfb" path="res://render 1/0005.png" id="5_i1ued"]
+[ext_resource type="Texture2D" uid="uid://c78hsqbwmwrov" path="res://render 1/0007.png" id="6_t86em"]
+[ext_resource type="Texture2D" uid="uid://4kxwpxk3a0nq" path="res://render 1/0009.png" id="7_vn23v"]
+[ext_resource type="Texture2D" uid="uid://dd5o8cpemnysi" path="res://render 1/0011.png" id="8_581qg"]
+[ext_resource type="Texture2D" uid="uid://cnm6i76xfux8n" path="res://render 1/0013.png" id="9_1s1pt"]
+[ext_resource type="Texture2D" uid="uid://dxpd2vrqahju6" path="res://render 1/0015.png" id="10_b3l81"]
+[ext_resource type="Texture2D" uid="uid://elocobxbifau" path="res://render 1/0017.png" id="11_adl2g"]
+[ext_resource type="Texture2D" uid="uid://wy65wkpqaev3" path="res://render 1/0019.png" id="12_twyxb"]
+[ext_resource type="Texture2D" uid="uid://dm6osy7l1uxbs" path="res://render 1/0021.png" id="13_x7vbd"]
+[ext_resource type="Texture2D" uid="uid://co4hunp1pgen7" path="res://render 1/0023.png" id="14_5ctwe"]
+[ext_resource type="Texture2D" uid="uid://ca7vobm5ubt04" path="res://render 1/0025.png" id="15_atd4q"]
+[ext_resource type="Texture2D" uid="uid://bjpur1yltr3t0" path="res://render 1/0027.png" id="16_suymv"]
+[ext_resource type="Texture2D" uid="uid://d4ajtjt324nj0" path="res://render 1/0029.png" id="17_7inko"]
+[ext_resource type="Texture2D" uid="uid://c2ska5vt15onb" path="res://render 1/0031.png" id="18_uioxm"]
+[ext_resource type="Texture2D" uid="uid://0mia4q3iec2r" path="res://render 1/0033.png" id="19_kybqe"]
+[ext_resource type="Texture2D" uid="uid://i5tv51cn8y6p" path="res://render 1/0035.png" id="20_02uh1"]
+[ext_resource type="Texture2D" uid="uid://bhffsorn61q61" path="res://render 1/0037.png" id="21_xwyky"]
+[ext_resource type="Texture2D" uid="uid://cro1p87y24twn" path="res://render 1/0039.png" id="22_bnbcx"]
+[ext_resource type="Texture2D" uid="uid://bpjdpsy0mxgf0" path="res://render 1/0041.png" id="23_uha8e"]
+[ext_resource type="Texture2D" uid="uid://rd0olge1tphg" path="res://render 1/0043.png" id="24_gyvv7"]
+[ext_resource type="Texture2D" uid="uid://ddfjqngod86k7" path="res://render 1/0045.png" id="25_2rasm"]
+[ext_resource type="Texture2D" uid="uid://dnngu1f84lacy" path="res://render 1/0047.png" id="26_1ryvx"]
+[ext_resource type="Texture2D" uid="uid://br6rymphgb06s" path="res://render 1/0049.png" id="27_l413h"]
+[ext_resource type="Texture2D" uid="uid://83orcjc5mmnq" path="res://render 1/0051.png" id="28_q6m2d"]
+[ext_resource type="Texture2D" uid="uid://dcndok4vt547s" path="res://render 1/0053.png" id="29_0kx0n"]
+[ext_resource type="Texture2D" uid="uid://b5bluooyfm57j" path="res://render 1/0055.png" id="30_67lvk"]
+[ext_resource type="Texture2D" uid="uid://v1pn2jgi7rpb" path="res://render 1/0057.png" id="31_rpgss"]
+[ext_resource type="Texture2D" uid="uid://23xfxdpwcd8j" path="res://render 1/0059.png" id="32_ucbdh"]
+
+[sub_resource type="Resource" id="Resource_bds23"]
+script = ExtResource("2_gn0kt")
+buff_stat = "armor"
+buff_amount = 10.0
+buff_duration = 5.0
+effect_range = 500.0
+single_target = false
+affects_self = true
+trigger_type = 0
+trigger_event = ""
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dbqfx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hk4h5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hk4h5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1mpaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i1ued")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t86em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vn23v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_581qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1s1pt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b3l81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_adl2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_twyxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_x7vbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5ctwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_atd4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_suymv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7inko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uioxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_kybqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_02uh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_xwyky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_bnbcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_uha8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_gyvv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2rasm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_1ryvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_l413h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_q6m2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0kx0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_67lvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_rpgss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ucbdh")
+}],
+"loop": true,
+"name": &"move_e",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_34103")
+name = "Devilspawn Leader (Green)"
+image = ExtResource("1_1who4")
+description = "the ... of the fire summoners"
+attack = 15
+health = 220
+armor = 0
+attack_speed = 1
+move_speed = 100
+attack_range = 50
+max_mana = 50
+mana_regen = 10
+health_regen = 0
+fusion_level = 2
+element = "fire"
+ability_description = "Passive: 500 aoe + 5 armour"
+abilities = Array[ExtResource("1_6js6t")]([SubResource("Resource_bds23")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "devilspawn"
+hidden_archetype = "demonic"
+elements = Array[String](["fire:0.6", "dark:0.4"])
+has_animations = true
+animation_frames = SubResource("SpriteFrames_dbqfx")

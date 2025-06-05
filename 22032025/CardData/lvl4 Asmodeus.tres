@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=4 format=3 uid="uid://dmxblv3yakooy"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_1m8kq"]
+[ext_resource type="Texture2D" uid="uid://d02pqgvg38jwc" path="res://Assets/DALL·E 2025-02-10 19.54.06 - A borderless, full-bleed watercolor illustration in a surreal, graphic European graphic novel style, blending sharp ink precision with smoldering infe.webp" id="1_153un"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_q0rhg"]
+
+[resource]
+script = ExtResource("2_q0rhg")
+name = "fireimp"
+image = ExtResource("1_153un")
+description = "the ... of the fire summoners"
+attack = 60
+health = 400
+armor = 0
+attack_speed = 1
+move_speed = 80
+attack_range = 150
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 3
+element = "fire"
+ability_description = "NO ABILITY RIGHT NOW> BIG BOY"
+abilities = Array[ExtResource("1_1m8kq")]([])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "devilspawn"
+hidden_archetype = "demonic"
+elements = Array[String](["fire:0.7", "dark:0.3"])
+has_animations = false

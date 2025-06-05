@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=4 format=3 uid="uid://c21xgrpkiy74x"]
+
+[ext_resource type="Texture2D" uid="uid://wlr3y1jqr0c6" path="res://Assets/DALL·E 2025-02-08 20.39.21 - A watercolor illustration in a surreal, stylized European fantasy comic style, showing a humanoid warrior with subtle orcish features charging across .webp" id="1_1phcf"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_787f4"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_o1rcs"]
+
+[resource]
+script = ExtResource("2_o1rcs")
+name = "Crimson legion (lvl1)"
+image = ExtResource("1_1phcf")
+description = "the ... of the fire summoners"
+attack = 25
+health = 60
+armor = 0
+attack_speed = 1
+move_speed = 100
+attack_range = 100
+max_mana = 50
+mana_regen = 20
+health_regen = 0
+fusion_level = 0
+element = "fire"
+ability_description = "No ability, Hits Hard!"
+abilities = Array[ExtResource("1_787f4")]([])
+ability_range = 100.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "crimsonlegion"
+hidden_archetype = "plains"
+elements = Array[String](["fire:0.9", "earth:0.1"])
+has_animations = false

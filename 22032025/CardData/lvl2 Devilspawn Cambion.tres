@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://8x2xw8qwwivc"]
+
+[ext_resource type="Texture2D" uid="uid://ba4wixquufpvc" path="res://Assets/DALL·E 2025-02-10 18.25.26 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a towering, heavily-.webp" id="1_67rj6"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_1625r"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_1u07k"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/deatheaoedamage.gd" id="2_n31sr"]
+
+[sub_resource type="Resource" id="Resource_xh4dh"]
+script = ExtResource("2_n31sr")
+damage = 40
+radius = 100.0
+affects_allies = false
+single_target = false
+trigger_type = 1
+trigger_event = "on_death"
+
+[resource]
+script = ExtResource("2_1u07k")
+name = "Devilspawn Cambion (lvl2)"
+image = ExtResource("1_67rj6")
+description = "the ... of the fire summoners"
+attack = 10
+health = 120
+armor = 0
+attack_speed = 1
+move_speed = 20
+attack_range = 40
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "none"
+abilities = Array[ExtResource("1_1625r")]([SubResource("Resource_xh4dh")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "devilspawn"
+hidden_archetype = "demonic"
+elements = Array[String](["fire:0.6", "dark:0.4"])
+has_animations = false

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://bvab0wl5374sv"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_b21q0"]
+[ext_resource type="Texture2D" uid="uid://dekpwg2k4mk32" path="res://Assets/DALL·E 2025-02-09 09.21.20 - A borderless, full-bleed watercolor illustration in a surreal European sci-fi_fantasy comic style, depicting a humanoid fire-wielding marauder in a fi.webp" id="1_d1gl2"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_2mic5"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_ew2te"]
+
+[sub_resource type="Resource" id="Resource_p3svn"]
+script = ExtResource("2_ew2te")
+buff_stat = "attack_speed"
+buff_amount = 2.0
+buff_duration = 10.0
+effect_range = 300.0
+single_target = true
+affects_self = true
+trigger_type = 0
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_2mic5")
+name = "Burn Synergy 1 (lvl3)"
+image = ExtResource("1_d1gl2")
+description = "the ... of the fire summoners"
+attack = 30
+health = 160
+armor = 0
+attack_speed = 0
+move_speed = 120
+attack_range = 40
+max_mana = 60
+mana_regen = 10
+health_regen = 5
+fusion_level = 2
+element = "fire"
+ability_description = "Grants self 2 attacks per second for 10 seconds"
+abilities = Array[ExtResource("1_b21q0")]([SubResource("Resource_p3svn")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "burnsynergy"
+hidden_archetype = "plains"
+elements = Array[String](["fire:1.0"])
+has_animations = false

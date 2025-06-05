@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://bgrv0228vlhun"]
+
+[ext_resource type="Texture2D" uid="uid://b78cnfq1nfsb1" path="res://Assets/DALL·E 2025-02-08 20.18.33 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, showing a devilish overseer in.webp" id="1_bga0k"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_m7cov"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_cnbgx"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_uftgl"]
+
+[sub_resource type="Resource" id="Resource_rn1d6"]
+script = ExtResource("2_uftgl")
+buff_stat = "attack"
+buff_amount = 10.0
+buff_duration = 1000.0
+effect_range = 100.0
+single_target = true
+affects_self = true
+trigger_type = 0
+trigger_event = "on_ally_buff"
+
+[resource]
+script = ExtResource("2_cnbgx")
+name = "Devilspawnwhipmaster (lvl1)"
+image = ExtResource("1_bga0k")
+description = "the ... of the fire summoners"
+attack = 0
+health = 75
+armor = 0
+attack_speed = 1
+move_speed = 20
+attack_range = 40
+max_mana = 80
+mana_regen = 10
+health_regen = 0
+fusion_level = 0
+element = "fire"
+ability_description = "Permanently gain 10 attack damage on max mana"
+abilities = Array[ExtResource("1_m7cov")]([SubResource("Resource_rn1d6")])
+ability_range = 0.0
+combat_type = "spearman"
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "devilspawn"
+hidden_archetype = "demonic"
+elements = Array[String](["fire:0.65", "dark:0.4"])
+has_animations = false

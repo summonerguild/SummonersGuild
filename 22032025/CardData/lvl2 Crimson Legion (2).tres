@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=7 format=3 uid="uid://di2iqi6qpevpt"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_bhdc5"]
+[ext_resource type="Texture2D" uid="uid://b315ln100hldy" path="res://Assets/DALL·E 2025-02-10 19.17.16 - A borderless, full-bleed watercolor illustration in a surreal, graphic European fantasy style. A Crimson Legion berserker—a towering humanoid with sun.webp" id="1_gaeih"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_534kc"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_ipmvv"]
+
+[sub_resource type="Resource" id="Resource_pivkq"]
+script = ExtResource("2_ipmvv")
+buff_stat = "attack"
+buff_amount = 5.0
+buff_duration = 5.0
+effect_range = 300.0
+single_target = false
+affects_self = false
+trigger_type = 1
+trigger_event = ""
+
+[sub_resource type="Resource" id="Resource_4dup0"]
+script = ExtResource("2_ipmvv")
+buff_stat = "attack_speed"
+buff_amount = 0.5
+buff_duration = 5.0
+effect_range = 300.0
+single_target = false
+affects_self = false
+trigger_type = 1
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_534kc")
+name = "Crimson Legion 2 (lvl2)"
+image = ExtResource("1_gaeih")
+description = "the ... of the fire summoners"
+attack = 20
+health = 120
+armor = 0
+attack_speed = 1
+move_speed = 120
+attack_range = 40
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "on death grat 50% increased attack speed and 5 attack damage"
+abilities = Array[ExtResource("1_bhdc5")]([SubResource("Resource_pivkq"), SubResource("Resource_4dup0")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "crimsonlegion"
+hidden_archetype = "plains"
+elements = Array[String](["fire:0.9", "earth:0.1"])
+has_animations = false

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=4 format=3 uid="uid://x7ohifdol6kl"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_1g8xk"]
+[ext_resource type="Texture2D" uid="uid://cf37pnxwimqa8" path="res://Assets/DALL·E 2025-02-10 20.23.20 - A borderless, full-bleed watercolor illustration in a surreal, minimalist European graphic novel style, using bright soft pastels and delicate ink lin.webp" id="1_amdse"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_4lony"]
+
+[resource]
+script = ExtResource("2_4lony")
+name = "Basic Fire 1 (lvl3)"
+image = ExtResource("1_amdse")
+description = "the ... of the fire summoners"
+attack = 50
+health = 260
+armor = 0
+attack_speed = 1
+move_speed = 100
+attack_range = 40
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 2
+element = "fire"
+ability_description = "No ABility STATS!"
+abilities = Array[ExtResource("1_1g8xk")]([])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = ""
+hidden_archetype = ""
+elements = Array[String](["fire:1.0"])
+has_animations = false

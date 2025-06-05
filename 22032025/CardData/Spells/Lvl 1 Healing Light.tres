@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://dg0aulikbvtsm"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_ibyup"]
+[ext_resource type="Script" path="res://Scripts/SpellAbility.gd" id="2_qmbng"]
+[ext_resource type="Texture2D" uid="uid://68scxumanw4p" path="res://Assets/DALL·E 2025-03-08 22.48.54 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a mystical healing l.webp" id="3_g04p7"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="4_0ufw5"]
+
+[sub_resource type="Resource" id="Resource_dbn6t"]
+script = ExtResource("2_qmbng")
+spell_range = 300.0
+affects_allies = true
+affects_enemies = false
+single_target = true
+aoe_radius = 100.0
+blind_chance = 0.0
+blind_duration = 0.0
+damage = 0
+heal_amount = 0
+burn_stacks = 0
+buff_stat = "health"
+buff_amount = 30.0
+buff_duration = 1000.0
+spell_trigger_type = 0
+trigger_type = 0
+trigger_event = ""
+
+[resource]
+script = ExtResource("4_0ufw5")
+name = "SPELL"
+image = ExtResource("3_g04p7")
+description = "the ... of the fire summoners"
+attack = 0
+health = 0
+armor = 0
+attack_speed = 0
+move_speed = 0
+attack_range = 0
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 0
+element = "light"
+ability_description = "Heal target for 30"
+abilities = Array[ExtResource("1_ibyup")]([SubResource("Resource_dbn6t")])
+ability_range = 0.0
+combat_type = ""
+card_type = "spell"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 1.0
+archetype = ""
+hidden_archetype = ""
+elements = Array[String](["light:1.0"])
+has_animations = false

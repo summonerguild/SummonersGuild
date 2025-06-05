@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbq1maurgq1dq"
+path="res://.godot/imported/Into the Abyss.mp3-16855f99d0dd641bf4cf295fcb1993ca.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Into the Abyss.mp3"
+dest_files=["res://.godot/imported/Into the Abyss.mp3-16855f99d0dd641bf4cf295fcb1993ca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

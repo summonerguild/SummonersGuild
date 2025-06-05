@@ -1,0 +1,248 @@
+[gd_scene load_steps=19 format=3 uid="uid://c5r68kdob4mbc"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_wi5g2"]
+[ext_resource type="PackedScene" uid="uid://bat8soe1nsltq" path="res://Scenes/FusionMenu.tscn" id="2_ekpmp"]
+[ext_resource type="Script" path="res://Scripts/allysummonershield.gd" id="3_44vb1"]
+[ext_resource type="Texture2D" uid="uid://diujxc6mh3cxd" path="res://Assets/Shield.png" id="3_kpku2"]
+[ext_resource type="Script" path="res://Scripts/opponentsummonershield.gd" id="4_14f5m"]
+[ext_resource type="PackedScene" uid="uid://68pbd7bti7d" path="res://Scenes/HealthBar.tscn" id="5_810fe"]
+[ext_resource type="PackedScene" uid="uid://b00jo3t6afre2" path="res://Scenes/Creature.tscn" id="6_xcgaw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x58sr"]
+size = Vector2(1272.2, 215.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjdhq"]
+size = Vector2(1280.5, 198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l15b"]
+size = Vector2(1274, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4cv1"]
+size = Vector2(936, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvc4g"]
+size = Vector2(935, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgw5i"]
+size = Vector2(724, 435)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lw1se"]
+radius = 124.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fndav"]
+radius = 124.227
+
+[sub_resource type="Curve2D" id="Curve2D_wp7va"]
+bake_interval = 155.18
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2522.44, 142.979, 0, 0, 0, 0, 2430.45, 136.17, 0, 0, 0, 0, 2246.48, 124.596, 0, 0, 0, 0, 2021.63, 115.404, 0, 0, 0, 0, 1831.53, 113.021, 0, 0, 0, 0, 1618.94, 109.957, 0, 0, 0, 0, 1404.31, 110.979, 0, 0, 0, 0, 1126.31, 110.638, 0, 0, 0, 0, 962.779, 110.979, 0, 0, 0, 0, 748.147, 114.383, 0, 0, 0, 0, 556, 121.191, 0, 0, 0, 0, 355.676, 135.489, 0, 0, 0, 0, 296.397, 140.596)
+}
+point_count = 13
+
+[sub_resource type="Curve2D" id="Curve2D_jyp26"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1180.2, 454.8, 0, 0, 0, 0, 1137.2, 473.8, 0, 0, 0, 0, 1034.2, 503.8, 0, 0, 0, 0, 924.2, 524.8, 0, 0, 0, 0, 785.2, 539.8, 0, 0, 0, 0, 636.2, 547.8, 0, 0, 0, 0, 516.2, 550.8, 0, 0, 0, 0, 368.2, 548.8, 0, 0, 0, 0, 226.2, 520.8, 0, 0, 0, 0, 128.2, 489.8, 0, 0, 0, 0, 81.2, 466.8)
+}
+point_count = 11
+
+[sub_resource type="Curve2D" id="Curve2D_gd73t"]
+bake_interval = 50.0
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1121.2, 328.8, 0, 0, 0, 0, 146.2, 325.8)
+}
+point_count = 2
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_wi5g2")
+
+[node name="BoardPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_top = -42.0
+offset_bottom = -86.0
+
+[node name="Lane1" type="Area2D" parent="BoardPanel"]
+position = Vector2(-90, -60)
+
+[node name="Lane1Collision" type="CollisionShape2D" parent="BoardPanel/Lane1"]
+position = Vector2(727.2, 170.8)
+shape = SubResource("RectangleShape2D_x58sr")
+
+[node name="Lane1ColorRect" type="ColorRect" parent="BoardPanel/Lane1/Lane1Collision"]
+visible = false
+offset_left = -361.0
+offset_top = -75.0
+offset_right = 358.0
+offset_bottom = 74.0
+mouse_filter = 2
+color = Color(0, 0.682353, 0.682353, 0.184314)
+
+[node name="Lane2" type="Area2D" parent="BoardPanel"]
+position = Vector2(-90, -60)
+
+[node name="Lane2Collision" type="CollisionShape2D" parent="BoardPanel/Lane2"]
+position = Vector2(727.2, 379.8)
+shape = SubResource("RectangleShape2D_bjdhq")
+debug_color = Color(0.580072, 0.53627, 0.372062, 0.42)
+
+[node name="Lane2ColorRect" type="ColorRect" parent="BoardPanel/Lane2/Lane2Collision"]
+visible = false
+offset_left = -304.0
+offset_top = -66.0
+offset_right = 303.0
+offset_bottom = 67.0
+mouse_filter = 2
+color = Color(0.764899, 0.543178, 0.338352, 0.184314)
+
+[node name="Lane3" type="Area2D" parent="BoardPanel"]
+position = Vector2(-90, -60)
+
+[node name="Lane3Collision" type="CollisionShape2D" parent="BoardPanel/Lane3"]
+position = Vector2(729.2, 605.8)
+shape = SubResource("RectangleShape2D_6l15b")
+debug_color = Color(0.555511, 0.508426, 0.647091, 0.42)
+
+[node name="Lane3ColorRect" type="ColorRect" parent="BoardPanel/Lane3/Lane3Collision"]
+visible = false
+offset_left = -361.0
+offset_top = -75.0
+offset_right = 358.0
+offset_bottom = 74.0
+mouse_filter = 2
+color = Color(0.880381, 0.33416, 0.853456, 0.184314)
+
+[node name="Wall1" type="StaticBody2D" parent="BoardPanel"]
+position = Vector2(357, 153)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Wall1Collision" type="CollisionShape2D" parent="BoardPanel/Wall1"]
+position = Vector2(287, 66.4)
+shape = SubResource("RectangleShape2D_y4cv1")
+debug_color = Color(0.823792, 0.359067, 0.466378, 0.42)
+
+[node name="ColorRect" type="ColorRect" parent="BoardPanel/Wall1/Wall1Collision"]
+offset_left = -466.0
+offset_top = -14.0
+offset_right = 465.0
+offset_bottom = 13.0
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="Wall2" type="StaticBody2D" parent="BoardPanel"]
+position = Vector2(359, 279)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Wall2Collision" type="CollisionShape2D" parent="BoardPanel/Wall2"]
+position = Vector2(285, 142.4)
+shape = SubResource("RectangleShape2D_nvc4g")
+debug_color = Color(0.860568, 0.309346, 0.490285, 0.42)
+
+[node name="ColorRect" type="ColorRect" parent="BoardPanel/Wall2/Wall2Collision"]
+offset_left = -472.0
+offset_top = -20.0
+offset_right = 461.0
+offset_bottom = 14.0
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="BoardBoundary" type="StaticBody2D" parent="BoardPanel"]
+visible = false
+position = Vector2(-90, -60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/BoardBoundary"]
+z_index = -1
+position = Vector2(449, 280)
+shape = SubResource("RectangleShape2D_pgw5i")
+debug_color = Color(0.0430489, 0.139046, 0.112323, 0.0392157)
+
+[node name="AllySummonerShield" type="Area2D" parent="BoardPanel"]
+position = Vector2(-5, 331.4)
+script = ExtResource("3_44vb1")
+
+[node name="AllySummonerShieldNode" type="Node2D" parent="BoardPanel/AllySummonerShield"]
+position = Vector2(-248, -182.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardPanel/AllySummonerShield"]
+position = Vector2(0.674988, -11.675)
+scale = Vector2(0.469335, 0.469335)
+texture = ExtResource("3_kpku2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/AllySummonerShield"]
+position = Vector2(-1, -6)
+shape = SubResource("CircleShape2D_lw1se")
+debug_color = Color(2.64719e-06, 0.63598, 0.410581, 0.42)
+
+[node name="HealthBar" parent="BoardPanel/AllySummonerShield" instance=ExtResource("5_810fe")]
+position = Vector2(33, -149)
+
+[node name="OpponentSummonerShield" type="Area2D" parent="BoardPanel"]
+position = Vector2(1281, 319.4)
+disable_mode = 2
+script = ExtResource("4_14f5m")
+
+[node name="OpponentSummonerShieldNode" type="Node2D" parent="BoardPanel/OpponentSummonerShield"]
+z_index = 1
+position = Vector2(-1610, -651)
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardPanel/OpponentSummonerShield"]
+position = Vector2(-4.97498, 4.02502)
+scale = Vector2(0.482644, 0.482644)
+texture = ExtResource("3_kpku2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/OpponentSummonerShield"]
+position = Vector2(-2, 5)
+shape = SubResource("CircleShape2D_fndav")
+debug_color = Color(0.991325, 0.0883201, 0, 0.42)
+
+[node name="HealthBar" parent="BoardPanel/OpponentSummonerShield" instance=ExtResource("5_810fe")]
+position = Vector2(-39.8, -144.6)
+
+[node name="Creature" parent="BoardPanel" instance=ExtResource("6_xcgaw")]
+position = Vector2(-216.8, -185.2)
+collision_layer = 255
+collision_mask = 247
+
+[node name="Lane1Path" type="Path2D" parent="BoardPanel"]
+position = Vector2(-51.8, -230.2)
+scale = Vector2(0.489209, 2.9375)
+curve = SubResource("Curve2D_wp7va")
+
+[node name="Lane2Path" type="Path2D" parent="BoardPanel"]
+curve = SubResource("Curve2D_jyp26")
+
+[node name="Lane3Path" type="Path2D" parent="BoardPanel"]
+position = Vector2(0.149948, 0)
+scale = Vector2(0.998974, 1)
+curve = SubResource("Curve2D_gd73t")
+
+[node name="Hand" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 0.95
+offset_top = -57.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FusionMenu" parent="." instance=ExtResource("2_ekpmp")]
+
+[node name="DrawCardTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="area_entered" from="BoardPanel/OpponentSummonerShield" to="BoardPanel/Creature" method="_on_opponent_summoner_shield_area_entered"]
+[connection signal="area_shape_entered" from="BoardPanel/Creature" to="BoardPanel/OpponentSummonerShield" method="_on_creature_area_shape_entered"]
+[connection signal="timeout" from="DrawCardTimer" to="." method="_on_draw_card_timer_timeout"]

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://bvblkxnxv5ln6"]
+
+[ext_resource type="Texture2D" uid="uid://dxyp44ydd5bxl" path="res://Assets/DALL·E 2025-02-08 19.44.29 - A borderless, full-bleed watercolor illustration in a surreal European sci-fi_fantasy comic style, depicting a humanoid fire-wielding marauder with on.webp" id="1_odw36"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_vrstg"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_3uslp"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/deatheaoedamage.gd" id="2_uemal"]
+
+[sub_resource type="Resource" id="Resource_o7e0b"]
+script = ExtResource("2_uemal")
+damage = 20
+radius = 100.0
+affects_allies = true
+single_target = false
+trigger_type = 1
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_3uslp")
+name = "Burn Synergy 1 (lvl1)"
+image = ExtResource("1_odw36")
+description = "the ... of the fire summoners"
+attack = 8
+health = 75
+armor = 0
+attack_speed = 1
+move_speed = 150
+attack_range = 40
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 0
+element = "fire"
+ability_description = "On death creature explodes dealing 20 aoe 100"
+abilities = Array[ExtResource("1_vrstg")]([SubResource("Resource_o7e0b")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = "damage"
+spell_range = 0.0
+spell_damage = 30
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "burnsynergy"
+hidden_archetype = "plains"
+elements = Array[String](["fire:1.0"])
+has_animations = false

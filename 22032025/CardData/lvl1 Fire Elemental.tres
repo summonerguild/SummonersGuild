@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=4 format=3 uid="uid://ste8mbmatw54"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_a5pia"]
+[ext_resource type="Texture2D" uid="uid://goafli54jmc1" path="res://Assets/DALL·E 2025-02-08 20.30.15 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a small, level-one f.webp" id="1_pswja"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_otstl"]
+
+[resource]
+script = ExtResource("2_otstl")
+name = "Fire Elemental 1 (lvl1)"
+image = ExtResource("1_pswja")
+description = "the ... of the fire summoners"
+attack = 5
+health = 160
+armor = 2
+attack_speed = 1
+move_speed = 80
+attack_range = 40
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 0
+element = "fire"
+ability_description = "is a tank!"
+abilities = Array[ExtResource("1_a5pia")]([])
+ability_range = 300.0
+combat_type = "swordsman"
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "elemental"
+hidden_archetype = ""
+elements = Array[String](["fire:1.0"])
+has_animations = false

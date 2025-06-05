@@ -1,0 +1,98 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceh38oapnl2nj"]
+
+[sub_resource type="GDScript" id="GDScript_r4uy2"]
+script/source = "extends Control
+
+# References to buttons
+@onready var pause_button = $Panel/VBoxContainer/HBoxContainer/PauseButton
+@onready var slow_button = $Panel/VBoxContainer/HBoxContainer/SlowButton
+@onready var normal_button = $Panel/VBoxContainer/HBoxContainer/NormalButton
+@onready var fast_button = $Panel/VBoxContainer/HBoxContainer/FastButton
+
+# Reference to time manager
+@onready var time_manager = get_node(\"/root/TimeManager\")
+
+func _ready():
+	# Connect button signals
+	pause_button.pressed.connect(_on_pause_button_pressed)
+	slow_button.pressed.connect(_on_slow_button_pressed)
+	normal_button.pressed.connect(_on_normal_button_pressed)
+	fast_button.pressed.connect(_on_fast_button_pressed)
+	
+	# Connect to time scale changes
+	time_manager.time_scale_changed.connect(update_button_states)
+	
+	# Set initial visual state
+	update_button_states(TimeManager.NORMAL)
+
+func _on_pause_button_pressed():
+	time_manager.toggle_pause()
+
+func _on_slow_button_pressed():
+	time_manager.set_slow()
+
+func _on_normal_button_pressed():
+	time_manager.set_normal()
+
+func _on_fast_button_pressed():
+	time_manager.set_fast()
+
+func update_button_states(current_scale: float):
+	# Reset all buttons to normal state
+	pause_button.modulate = Color(1, 1, 1)
+	slow_button.modulate = Color(1, 1, 1)
+	normal_button.modulate = Color(1, 1, 1)
+	fast_button.modulate = Color(1, 1, 1)
+	
+	# Highlight the active button
+	if time_manager.is_paused():
+		pause_button.modulate = Color(1, 0.5, 0.5)  # Reddish for pause
+	elif current_scale == TimeManager.SLOW:
+		slow_button.modulate = Color(0.7, 0.7, 1)  # Bluish for slow
+	elif current_scale == TimeManager.NORMAL:
+		normal_button.modulate = Color(1, 1, 0.7)  # Yellowish for normal
+	elif current_scale == TimeManager.FAST:
+		fast_button.modulate = Color(0.7, 1, 0.7)  # Greenish for fast
+"
+
+[node name="TimeControls" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = SubResource("GDScript_r4uy2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 0.8
+offset_left = -40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Game Speed"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="PauseButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "II"
+
+[node name="SlowButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "slow (0.5)%"
+text = "<<"
+
+[node name="NormalButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ">"
+
+[node name="FastButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ">>"

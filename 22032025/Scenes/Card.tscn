@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://borp16vbtwmo0"]
+
+[ext_resource type="Script" path="res://Scripts/Card.gd" id="1_41aub"]
+
+[node name="Card" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 150.0
+script = ExtResource("1_41aub")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 150.0

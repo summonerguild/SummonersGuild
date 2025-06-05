@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://b3g2o6rtqf2pp"]
+
+[ext_resource type="Texture2D" uid="uid://bj0fq47807oi" path="res://Assets/DALL·E 2025-02-10 20.43.45 - A borderless, full-bleed watercolor illustration in a surreal European sci-fi_fantasy comic style, blending stark ink outlines with smoldering, dreaml.webp" id="1_v6bn4"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_yimy8"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/BurnAbility.gd" id="2_uav4m"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_w8piv"]
+
+[sub_resource type="Resource" id="Resource_cqqnj"]
+script = ExtResource("2_uav4m")
+tick_interval = 0.5
+initial_stacks = 10
+effect_range = 300.0
+single_target = true
+affects_allies = true
+affects_self = true
+trigger_type = 3
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_w8piv")
+name = "fireimp"
+image = ExtResource("1_v6bn4")
+description = "the ... of the fire summoners"
+attack = 60
+health = 1000
+armor = 0
+attack_speed = 1
+move_speed = 10
+attack_range = 100
+max_mana = 50
+mana_regen = 10
+health_regen = 0
+fusion_level = 3
+element = "fire"
+ability_description = "applies 10 burn to self each attack with max mana"
+abilities = Array[ExtResource("1_yimy8")]([SubResource("Resource_cqqnj")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "burnsynergy"
+hidden_archetype = "plains"
+elements = Array[String](["fire:1.0"])
+has_animations = false

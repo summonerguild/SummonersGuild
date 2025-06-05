@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://dh32tkljpvs3o"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_jysjt"]
+[ext_resource type="Script" path="res://Scripts/SpellAbility.gd" id="2_d03sf"]
+[ext_resource type="Texture2D" uid="uid://dkulefckfivvq" path="res://Assets/DALL·E 2025-03-08 15.50.05 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a massive, fiery mag.webp" id="3_w522b"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="4_1xtrv"]
+
+[sub_resource type="Resource" id="Resource_5khay"]
+script = ExtResource("2_d03sf")
+spell_range = 3000.0
+affects_allies = false
+affects_enemies = true
+single_target = false
+aoe_radius = 100.0
+blind_chance = 0.0
+blind_duration = 0.0
+damage = 40
+heal_amount = 0
+burn_stacks = 0
+buff_stat = ""
+buff_amount = 0.0
+buff_duration = 1.0
+spell_trigger_type = 0
+trigger_type = 0
+trigger_event = ""
+
+[resource]
+script = ExtResource("4_1xtrv")
+name = "SPELL"
+image = ExtResource("3_w522b")
+description = "the ... of the fire summoners"
+attack = 0
+health = 0
+armor = 0
+attack_speed = 0
+move_speed = 0
+attack_range = 0
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "Deal 40 damage to enemie creatures in 100 aoe"
+abilities = Array[ExtResource("1_jysjt")]([SubResource("Resource_5khay")])
+ability_range = 0.0
+combat_type = ""
+card_type = "spell"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 1.0
+archetype = ""
+hidden_archetype = ""
+elements = Array[String](["fire:1.0"])
+has_animations = false

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=4 format=3 uid="uid://crukwguiwsa2w"]
+
+[ext_resource type="Texture2D" uid="uid://bk7k4n2s63ysf" path="res://Assets/DALL·E 2025-02-10 20.31.57 - A borderless, full-bleed watercolor illustration in a surreal, graphic European graphic novel style, blending sharp ink precision with smoldering dyna.webp" id="1_140nl"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_vknba"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_q1ejt"]
+
+[resource]
+script = ExtResource("2_q1ejt")
+name = "Ranged Fire Elemental (lvl2)"
+image = ExtResource("1_140nl")
+description = "the ... of the fire summoners"
+attack = 25
+health = 100
+armor = 0
+attack_speed = 1
+move_speed = 20
+attack_range = 200
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "No Ability is unpraded range attacker"
+abilities = Array[ExtResource("1_vknba")]([])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "elemental"
+hidden_archetype = "rangedattacker"
+elements = Array[String](["fire:1.0"])
+has_animations = false

@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://b00jo3t6afre2"]
+
+[ext_resource type="Script" path="res://Scripts/creature.gd" id="1_c7lc7"]
+[ext_resource type="PackedScene" uid="uid://68pbd7bti7d" path="res://Scenes/HealthBar.tscn" id="2_1ct7n"]
+[ext_resource type="PackedScene" uid="uid://cqi8tu4wx6l63" path="res://Scenes/ManaBar.tscn" id="3_ab6p2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ep3b"]
+size = Vector2(50, 50)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sotsa"]
+radius = 81.0062
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4fope"]
+radius = 152.03
+
+[node name="Creature" type="Area2D"]
+disable_mode = 2
+collision_priority = 5.0
+script = ExtResource("1_c7lc7")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_5ep3b")
+
+[node name="HealthBar" parent="." instance=ExtResource("2_1ct7n")]
+position = Vector2(0, -25)
+
+[node name="ManaBar" parent="." instance=ExtResource("3_ab6p2")]
+position = Vector2(0, -15)
+
+[node name="AggroZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AggroZone"]
+shape = SubResource("CircleShape2D_sotsa")
+debug_color = Color(0.65686, 0.194937, 0.261388, 0.42)
+
+[node name="RayCastS" type="RayCast2D" parent="."]
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastW" type="RayCast2D" parent="."]
+target_position = Vector2(-50, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastN" type="RayCast2D" parent="."]
+target_position = Vector2(0, -50)
+collision_mask = 12
+collide_with_areas = true
+
+[node name="RayCastE" type="RayCast2D" parent="."]
+target_position = Vector2(50, 0)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="RayCastSE" type="RayCast2D" parent="."]
+target_position = Vector2(32.5, 32.5)
+collision_mask = 140
+collide_with_areas = true
+
+[node name="RayCastSW" type="RayCast2D" parent="."]
+target_position = Vector2(-32.5, 32.5)
+collision_mask = 140
+collide_with_areas = true
+
+[node name="RayCastNW" type="RayCast2D" parent="."]
+target_position = Vector2(-32.5, -32.5)
+collision_mask = 140
+
+[node name="RayCastNE" type="RayCast2D" parent="."]
+target_position = Vector2(32.5, -32.5)
+collision_mask = 140
+
+[node name="SummonZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SummonZone"]
+shape = SubResource("CircleShape2D_4fope")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

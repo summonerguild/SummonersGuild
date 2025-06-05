@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://botiahlhbcbgp"]
+
+[ext_resource type="Script" path="res://Scripts/SummonCooldownIndicator.gd" id="1_718j0"]
+
+[node name="SummonCooldownIndicator" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_718j0")

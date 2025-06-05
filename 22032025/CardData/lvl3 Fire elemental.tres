@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=4 format=3 uid="uid://csrubx2ilyi0k"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_ip1vb"]
+[ext_resource type="Texture2D" uid="uid://d07cwhetxef5v" path="res://Assets/DALL·E 2025-02-08 21.21.09 - A borderless, full-bleed watercolor illustration in a surreal, simplified European sci-fi_fantasy comic style, depicting an elder, female-coded fire e.webp" id="1_vd4x0"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_f46co"]
+
+[resource]
+script = ExtResource("2_f46co")
+name = "Fire Elemental 1 (lvl 3)"
+image = ExtResource("1_vd4x0")
+description = "the ... of the fire summoners"
+attack = 35
+health = 100
+armor = 0
+attack_speed = 1
+move_speed = 50
+attack_range = 300
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 2
+element = "fire"
+ability_description = "No Ability is ranged damage!"
+abilities = Array[ExtResource("1_ip1vb")]([])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "elemental"
+hidden_archetype = ""
+elements = Array[String](["fire:1.0"])
+has_animations = false

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://df508kaj303pa"]
+
+[sub_resource type="GDScript" id="GDScript_0xccp"]
+script/source = "extends Control
+
+func _ready():
+	print(\"Test scene ready\")
+
+func _gui_input(event):
+	print(\"GUI input received\")  # This should print when any GUI input is received
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print(\"Mouse button pressed\")
+"
+
+[sub_resource type="GDScript" id="GDScript_lyrx4"]
+script/source = "extends Area2D
+
+
+
+#func _on_area_2d_2_area_entered(area: Area2D) -> void:
+#	print(\"Collision detected with:\")
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r03ju"]
+radius = 48.0937
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rnbjh"]
+radius = 24.6982
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = SubResource("GDScript_0xccp")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+script = SubResource("GDScript_lyrx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(137, 63)
+shape = SubResource("CircleShape2D_r03ju")
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(57, 43)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(34, 68)
+shape = SubResource("CircleShape2D_rnbjh")
+
+[connection signal="area_entered" from="Area2D2" to="Area2D" method="_on_area_2d_2_area_entered"]

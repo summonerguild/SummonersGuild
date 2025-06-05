@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://bllcxtjban4s"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_3k20b"]
+[ext_resource type="Texture2D" uid="uid://c04tnhr154e34" path="res://Assets/DALL·E 2025-02-10 20.06.39 - A borderless, full-bleed watercolor illustration in a surreal, graphic European graphic novel style, blending sharp ink precision with smoldering flui.webp" id="1_qlfpr"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/OnAttackDamageAbility.gd" id="2_o1dbl"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_oidxy"]
+
+[sub_resource type="Resource" id="Resource_u35h3"]
+script = ExtResource("2_o1dbl")
+bonus_damage = 60
+trigger_type = 3
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_oidxy")
+name = "Generic Fire (lvl2)"
+image = ExtResource("1_qlfpr")
+description = "the ... of the fire summoners"
+attack = 25
+health = 120
+armor = 0
+attack_speed = 1
+move_speed = 120
+attack_range = 60
+max_mana = 130
+mana_regen = 10
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "Attacking with max mana hits for 60 more"
+abilities = Array[ExtResource("1_3k20b")]([SubResource("Resource_u35h3")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = ""
+hidden_archetype = ""
+elements = Array[String](["fire:1.0"])
+has_animations = false

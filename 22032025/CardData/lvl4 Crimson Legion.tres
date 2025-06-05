@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://dhhb4gvmwydiq"]
+
+[ext_resource type="Texture2D" uid="uid://ct6rsk3jv2oij" path="res://Assets/DALL·E 2025-02-10 19.44.17 - A borderless, full-bleed watercolor illustration in a surreal, graphic European graphic novel style, blending precise ink linework with sun-scorched d.webp" id="1_gkvir"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_hnh8f"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_20s66"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_ro4a2"]
+
+[sub_resource type="Resource" id="Resource_i5o23"]
+script = ExtResource("2_20s66")
+buff_stat = "attack_speed"
+buff_amount = 0.15
+buff_duration = 999.0
+effect_range = 300.0
+single_target = true
+affects_self = true
+trigger_type = 2
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_ro4a2")
+name = "fireimp"
+image = ExtResource("1_gkvir")
+description = "the ... of the fire summoners"
+attack = 20
+health = 450
+armor = 0
+attack_speed = 1
+move_speed = 50
+attack_range = 100
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 3
+element = "fire"
+ability_description = "gain 10% attack speed per attack"
+abilities = Array[ExtResource("1_hnh8f")]([SubResource("Resource_i5o23")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "crimsonlegion"
+hidden_archetype = "plains"
+elements = Array[String](["fire:0.6", "earth:0.4"])
+has_animations = false

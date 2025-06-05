@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://borp16vbtwmo0"]
+
+[ext_resource type="Script" path="res://Scripts/Card.gd" id="1_41aub"]
+[ext_resource type="Texture2D" uid="uid://b7kj1q0a800qd" path="res://Assets/Fire Temp.PNG" id="1_uuh14"]
+
+[node name="Card" type="Control"]
+custom_minimum_size = Vector2(100, 150)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 150.0
+script = ExtResource("1_41aub")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 144.0
+
+[node name="FireTemp" type="Sprite2D" parent="TextureRect"]
+position = Vector2(49.1875, 72.5)
+scale = Vector2(0.315939, 0.35049)
+texture = ExtResource("1_uuh14")

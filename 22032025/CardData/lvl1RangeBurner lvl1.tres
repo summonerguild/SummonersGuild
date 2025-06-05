@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://bd15orxfw5h3d"]
+
+[ext_resource type="Texture2D" uid="uid://8fnadioyf01v" path="res://Assets/DALL·E 2025-02-08 20.49.36 - A borderless, full-bleed watercolor illustration in a slightly surreal, stylized European sci-fi_fantasy comic style, depicting a mysterious fire-wiel.webp" id="1_7b4mf"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_xy1mq"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/BurnAbility.gd" id="2_asgbt"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_ckmme"]
+
+[sub_resource type="Resource" id="Resource_h53l5"]
+script = ExtResource("2_asgbt")
+tick_interval = 0.5
+initial_stacks = 4
+effect_range = 300.0
+single_target = true
+affects_allies = false
+affects_self = false
+trigger_type = 0
+trigger_event = "on_burn"
+
+[resource]
+script = ExtResource("2_ckmme")
+name = "Ranged Burner (lvl1)"
+image = ExtResource("1_7b4mf")
+description = "the ... of the fire summoners"
+attack = 5
+health = 60
+armor = 0
+attack_speed = 1
+move_speed = 20
+attack_range = 300
+max_mana = 80
+mana_regen = 10
+health_regen = 0
+fusion_level = 0
+element = "fire"
+ability_description = "Applies 4 burn to target"
+abilities = Array[ExtResource("1_xy1mq")]([SubResource("Resource_h53l5")])
+ability_range = 2000.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "burnsynergy"
+hidden_archetype = "plains"
+elements = Array[String](["fire:1.0"])
+has_animations = false

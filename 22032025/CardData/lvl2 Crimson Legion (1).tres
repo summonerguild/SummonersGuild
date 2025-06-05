@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://ck8osfhoaa8cr"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_3h7bn"]
+[ext_resource type="Texture2D" uid="uid://i2vtyi3xuwa0" path="res://Assets/DALL·E 2025-02-10 19.08.41 - A borderless, full-bleed watercolor illustration in a surreal, stylized European fantasy comic style. A Crimson Legion armorer—a tall, muscular humano.webp" id="1_uk46e"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_7y6f2"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_h60t3"]
+
+[sub_resource type="Resource" id="Resource_tycv6"]
+script = ExtResource("2_h60t3")
+buff_stat = "move_speed"
+buff_amount = 100.0
+buff_duration = 2.0
+effect_range = 300.0
+single_target = false
+affects_self = true
+trigger_type = 0
+trigger_event = "on_ally_buff"
+
+[resource]
+script = ExtResource("2_7y6f2")
+name = "Crimson Legion 1 (lvl2)"
+image = ExtResource("1_uk46e")
+description = "the ... of the fire summoners"
+attack = 20
+health = 100
+armor = 0
+attack_speed = 1
+move_speed = 60
+attack_range = 40
+max_mana = 60
+mana_regen = 10
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "GRANT 100 INCREASED MOVESPEED for 2 seconds"
+abilities = Array[ExtResource("1_3h7bn")]([SubResource("Resource_tycv6")])
+ability_range = 0.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "crimsonlegion"
+hidden_archetype = "plains"
+elements = Array[String](["fire:0.9", "earth:0.1"])
+has_animations = false

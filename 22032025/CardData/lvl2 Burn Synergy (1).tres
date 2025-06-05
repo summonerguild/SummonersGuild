@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://c1bk6u4klwklb"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_6dcce"]
+[ext_resource type="Texture2D" uid="uid://dgl2arq7jb24h" path="res://Assets/DALL·E 2025-02-08 20.55.54 - A borderless, full-bleed watercolor illustration in a surreal European sci-fi_fantasy comic style, depicting a humanoid fire-wielding marauder now upg.webp" id="1_icv5q"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_718tc"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_hvg1k"]
+
+[sub_resource type="Resource" id="Resource_xjbdl"]
+script = ExtResource("2_hvg1k")
+buff_stat = "health_regen"
+buff_amount = 2.0
+buff_duration = 5.0
+effect_range = 300.0
+single_target = true
+affects_self = true
+trigger_type = 0
+trigger_event = "on_ally_buff"
+
+[resource]
+script = ExtResource("2_718tc")
+name = "Burn Synergy 1 (lvl2)"
+image = ExtResource("1_icv5q")
+description = "the ... of the fire summoners"
+attack = 10
+health = 140
+armor = 0
+attack_speed = 1
+move_speed = 20
+attack_range = 40
+max_mana = 80
+mana_regen = 5
+health_regen = 2
+fusion_level = 1
+element = "fire"
+ability_description = "Gain health regen = to 2x burn for 5 seconds"
+abilities = Array[ExtResource("1_6dcce")]([SubResource("Resource_xjbdl")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "burnsynergy"
+hidden_archetype = "plains"
+elements = Array[String](["fire:1.0"])
+has_animations = false

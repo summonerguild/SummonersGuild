@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://ogm8gh4lyau3"]
+
+[ext_resource type="Texture2D" uid="uid://fwx5rmvytn1x" path="res://Assets/DALL·E 2025-02-10 19.39.36 - A borderless, full-bleed watercolor illustration in a surreal, graphic European graphic novel style, blending intricate ink linework with ethereal des.webp" id="1_78vtq"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_oqhrt"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_e211o"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_un5pe"]
+
+[sub_resource type="Resource" id="Resource_2lrpq"]
+script = ExtResource("2_un5pe")
+buff_stat = "armor"
+buff_amount = 5.0
+buff_duration = 5.0
+effect_range = 300.0
+single_target = false
+affects_self = false
+trigger_type = 4
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_e211o")
+name = "Crimson Legion (lvl3)"
+image = ExtResource("1_78vtq")
+description = "the ... of the fire summoners"
+attack = 10
+health = 220
+armor = 0
+attack_speed = 1
+move_speed = 100
+attack_range = 40
+max_mana = 50
+mana_regen = 10
+health_regen = 0
+fusion_level = 2
+element = "fire"
+ability_description = "Grant 5 armour to all allies "
+abilities = Array[ExtResource("1_oqhrt")]([SubResource("Resource_2lrpq")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "crimsonlegion"
+hidden_archetype = "plains"
+elements = Array[String](["fire:0.9", "earth0.1"])
+has_animations = false

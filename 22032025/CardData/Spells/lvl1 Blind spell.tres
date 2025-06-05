@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://dib3s775vorvl"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_6grf0"]
+[ext_resource type="Script" path="res://Scripts/SpellAbility.gd" id="2_yftbi"]
+[ext_resource type="Texture2D" uid="uid://d4hralh5a68hx" path="res://Assets/DALL·E 2025-03-08 20.51.37 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a radiant, low-level.webp" id="3_aqp4a"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="4_wpv6y"]
+
+[sub_resource type="Resource" id="Resource_5khay"]
+script = ExtResource("2_yftbi")
+spell_range = 3000.0
+affects_allies = false
+affects_enemies = true
+single_target = true
+aoe_radius = 0.0
+blind_chance = 1.0
+blind_duration = 2.0
+damage = 0
+heal_amount = 0
+burn_stacks = 0
+buff_stat = ""
+buff_amount = 0.0
+buff_duration = 0.0
+spell_trigger_type = 0
+trigger_type = 0
+trigger_event = ""
+
+[resource]
+script = ExtResource("4_wpv6y")
+name = "SPELL"
+image = ExtResource("3_aqp4a")
+description = "the ... of the fire summoners"
+attack = 0
+health = 0
+armor = 0
+attack_speed = 0
+move_speed = 0
+attack_range = 0
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 0
+element = "fire"
+ability_description = "Blind target for 100% for 2 Seconds"
+abilities = Array[ExtResource("1_6grf0")]([SubResource("Resource_5khay")])
+ability_range = 0.0
+combat_type = ""
+card_type = "spell"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 1.0
+archetype = "burnsynergy"
+hidden_archetype = "plains"
+elements = Array[String](["fire:0.8", "light:0.2"])
+has_animations = false

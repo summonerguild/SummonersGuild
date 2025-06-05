@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://bevsalb4ipu6m"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_wgo4k"]
+[ext_resource type="Texture2D" uid="uid://d284ety43154k" path="res://Assets/DALL·E 2025-02-10 18.45.41 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a lean, muscular Dev.webp" id="1_yuijy"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_hb6lw"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_yjy5m"]
+
+[sub_resource type="Resource" id="Resource_e0sq2"]
+script = ExtResource("2_hb6lw")
+buff_stat = "attack"
+buff_amount = 10.0
+buff_duration = 5.0
+effect_range = 500.0
+single_target = false
+affects_self = false
+trigger_type = 4
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_yjy5m")
+name = "Devilspawn Leader (red)"
+image = ExtResource("1_yuijy")
+description = "the ... of the fire summoners"
+attack = 25
+health = 1800
+armor = 0
+attack_speed = 1
+move_speed = 100
+attack_range = 100
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 2
+element = "fire"
+ability_description = "aoe 500. Attack damage + 10"
+abilities = Array[ExtResource("1_wgo4k")]([SubResource("Resource_e0sq2")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "devilspawn"
+hidden_archetype = "demonic"
+elements = Array[String](["fire:0.8", "dark:0.2"])
+has_animations = false

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://bfrhjksofd1y2"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_fd3w6"]
+[ext_resource type="Texture2D" uid="uid://bg02tjmu7o7n" path="res://Assets/DALL·E 2025-02-09 09.21.25 - A borderless, full-bleed watercolor illustration in a surreal European sci-fi_fantasy comic style, depicting a less imposing humanoid fire-wielding ma.webp" id="1_ily5r"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/BurnAbility.gd" id="2_hksk2"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_ile1i"]
+
+[sub_resource type="Resource" id="Resource_wneeg"]
+script = ExtResource("2_hksk2")
+tick_interval = 0.5
+initial_stacks = 8
+effect_range = 300.0
+single_target = false
+affects_allies = true
+affects_self = true
+trigger_type = 0
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_ile1i")
+name = "Burn Synergy 2 (lvl2)"
+image = ExtResource("1_ily5r")
+description = "the ... of the fire summoners"
+attack = 30
+health = 160
+armor = 0
+attack_speed = 1
+move_speed = 50
+attack_range = 40
+max_mana = 80
+mana_regen = 10
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "Apply 8 burn aoe to all creatures"
+abilities = Array[ExtResource("1_fd3w6")]([SubResource("Resource_wneeg")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "burnsynergy"
+hidden_archetype = "plains"
+elements = Array[String](["fire:1.0"])
+has_animations = false

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://cflrn0ck1dr22"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_2sk6t"]
+[ext_resource type="Texture2D" uid="uid://c72ypvbuhvnet" path="res://Assets/DALL·E 2025-02-08 21.13.11 - A borderless, full-bleed watercolor illustration in a slightly surreal, simplified European sci-fi_fantasy comic style, depicting a more evolved, adul.webp" id="1_v7og6"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_nhv8w"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_y7kxl"]
+
+[sub_resource type="Resource" id="Resource_lku31"]
+script = ExtResource("2_nhv8w")
+buff_stat = "armor"
+buff_amount = 5.0
+buff_duration = 5.0
+effect_range = 500.0
+single_target = true
+affects_self = true
+trigger_type = 0
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_y7kxl")
+name = "Fire Elemental (lvl2)"
+image = ExtResource("1_v7og6")
+description = "the ... of the fire summoners"
+attack = 10
+health = 140
+armor = 2
+attack_speed = 1
+move_speed = 50
+attack_range = 100
+max_mana = 100
+mana_regen = 10
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "Gives 5 armour to self"
+abilities = Array[ExtResource("1_2sk6t")]([SubResource("Resource_lku31")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "elemental"
+hidden_archetype = ""
+elements = Array[String](["fire:1.0"])
+has_animations = false

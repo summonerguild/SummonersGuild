@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://sh3ir4j1x4kq"]
+
+[ext_resource type="Script" path="res://Scripts/deckselectionmenu.gd" id="1_6jkwx"]
+
+[node name="DeckSelectionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6jkwx")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1112.0
+offset_bottom = 510.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 1109.0
+offset_bottom = 515.0
+columns = 6
+
+[node name="Button" type="Button" parent="Panel/GridContainer"]
+visible = false
+layout_mode = 2
+text = "Confirm Selection"
+
+[node name="DeckCountLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1026.0
+offset_right = 1094.0
+offset_bottom = 23.0

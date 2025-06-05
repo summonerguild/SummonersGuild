@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=6 format=3 uid="uid://c8r3a3f6ilp40"]
+
+[ext_resource type="Texture2D" uid="uid://cb0260pvca6oh" path="res://Assets/DALL·E 2025-02-10 20.57.02 - A borderless, full-bleed watercolor illustration in a surreal European sci-fi_fantasy comic style, blending sharp ink precision with smoldering elemen.webp" id="1_h5ah1"]
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_lfyw5"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_857qm"]
+[ext_resource type="Script" path="res://Scripts/AbilityScripts/on_ally_buff_ability.gd" id="2_gjj5e"]
+
+[sub_resource type="Resource" id="Resource_iwf0d"]
+script = ExtResource("2_gjj5e")
+buff_stat = "attack"
+buff_amount = 5.0
+buff_duration = 10.0
+effect_range = 300.0
+single_target = true
+affects_self = false
+trigger_type = 4
+trigger_event = ""
+
+[resource]
+script = ExtResource("2_857qm")
+name = "Ranged Fire Elemental (lvl3)"
+image = ExtResource("1_h5ah1")
+description = "the ... of the fire summoners"
+attack = 5
+health = 260
+armor = 0
+attack_speed = 1
+move_speed = 20
+attack_range = 300
+max_mana = 50
+mana_regen = 10
+health_regen = 0
+fusion_level = 2
+element = "fire"
+ability_description = "Grants attack to allies rapidly"
+abilities = Array[ExtResource("1_lfyw5")]([SubResource("Resource_iwf0d")])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = "elemental"
+hidden_archetype = "rangedattacker"
+elements = Array[String](["fire:1.0"])
+has_animations = false

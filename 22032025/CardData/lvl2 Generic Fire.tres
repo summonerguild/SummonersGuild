@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="carddata" load_steps=4 format=3 uid="uid://1wmg6t6df6jf"]
+
+[ext_resource type="Script" path="res://Scripts/Ability.gd" id="1_fylw3"]
+[ext_resource type="Texture2D" uid="uid://dujro112h2xnk" path="res://Assets/DALL·E 2025-02-10 20.12.47 - A borderless, full-bleed watercolor illustration in a surreal, graphic European graphic novel style, merging sharp ink definition with molten ferocity.webp" id="1_nktby"]
+[ext_resource type="Script" path="res://Scripts/carddata.gd" id="2_y7qjm"]
+
+[resource]
+script = ExtResource("2_y7qjm")
+name = "Generic Fire 2 (lvl2)"
+image = ExtResource("1_nktby")
+description = "the ... of the fire summoners"
+attack = 20
+health = 220
+armor = 0
+attack_speed = 1
+move_speed = 100
+attack_range = 40
+max_mana = 0
+mana_regen = 0
+health_regen = 0
+fusion_level = 1
+element = "fire"
+ability_description = "none"
+abilities = Array[ExtResource("1_fylw3")]([])
+ability_range = 300.0
+combat_type = ""
+card_type = "creature"
+spell_effect_type = ""
+spell_range = 300.0
+spell_damage = 0
+spell_target_type = "enemy"
+spell_aoe_radius = 100.0
+archetype = ""
+hidden_archetype = ""
+elements = Array[String](["fire:1.0"])
+has_animations = false

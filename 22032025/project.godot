@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Summoners Guild 0.000"
+run/main_scene="res://Scenes/DeckSelectionMenu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalSignals="*res://Scripts/GlobalSignals.gd"
+DumpSceneInfo="*res://Scripts/dump_scene_info.gd"
+AudioManager="*res://Scripts/AudioManager.gd"
+GameStateManager="*res://Scripts/GameStateManager.gd"
+cardfactory="*res://Scripts/cardfactory.gd"
+GlobalDeck="*res://Scripts/GlobalDeck.gd"
+CombatAdvantageManager="*res://Scripts/combat_advantage_manager.gd"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/size/mode=3
+window/stretch/mode="viewport"

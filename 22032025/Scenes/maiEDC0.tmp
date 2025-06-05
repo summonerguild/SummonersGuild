@@ -1,0 +1,356 @@
+[gd_scene load_steps=24 format=3 uid="uid://c5r68kdob4mbc"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_wi5g2"]
+[ext_resource type="PackedScene" uid="uid://bat8soe1nsltq" path="res://Scenes/FusionMenu.tscn" id="2_ekpmp"]
+[ext_resource type="Script" path="res://Scripts/allysummonershield.gd" id="3_44vb1"]
+[ext_resource type="Texture2D" uid="uid://diujxc6mh3cxd" path="res://Assets/Shield.png" id="3_kpku2"]
+[ext_resource type="Script" path="res://Scripts/opponentsummonershield.gd" id="4_14f5m"]
+[ext_resource type="PackedScene" uid="uid://68pbd7bti7d" path="res://Scenes/HealthBar.tscn" id="5_810fe"]
+[ext_resource type="PackedScene" uid="uid://b00jo3t6afre2" path="res://Scenes/Creature.tscn" id="6_xcgaw"]
+[ext_resource type="Script" path="res://Scripts/pathvisualizer.gd" id="7_2ism6"]
+[ext_resource type="Script" path="res://Scripts/descriptive_box.gd" id="9_m8x22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x58sr"]
+size = Vector2(1272.2, 215.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjdhq"]
+size = Vector2(1280.5, 198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l15b"]
+size = Vector2(1274, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4cv1"]
+size = Vector2(936, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvc4g"]
+size = Vector2(935, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgw5i"]
+size = Vector2(724, 435)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lw1se"]
+radius = 124.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fd0tg"]
+radius = 350.051
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fndav"]
+radius = 124.227
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dsaeo"]
+radius = 349.607
+
+[sub_resource type="Curve2D" id="Curve2D_wp7va"]
+bake_interval = 155.18
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 230.576, 148.834, 0, 0, 0, 0, 255.477, 145.373, 0, 0, 0, 0, 269.175, 143.515, 0, 0, 0, 0, 284.157, 142.22, 0, 0, 0, 0, 298.032, 139.983, 0, 0, 0, 0, 312.341, 137.6, 0, 0, 0, 0, 318.473, 135.557, 0, 0, 0, 0, 332.378, 133.799, 0, 0, 0, 0, 351.954, 132.447, 0, 0, 0, 0, 373.664, 130.791, 0, 0, 0, 0, 390.719, 129.751, 0, 0, 0, 0, 410.459, 127.728, 0, 0, 0, 0, 424.767, 126.026, 0, 0, 0, 0, 433.129, 125.631, 0, 0, 0, 0, 457.004, 124.04, 0, 0, 0, 0, 473.369, 122.059, 0, 0, 0, 0, 489.747, 122.223, 0, 0, 0, 0, 516.753, 121.26, 0, 0, 0, 0, 529.017, 121.26, 0, 0, 0, 0, 557.279, 119.723, 0, 0, 0, 0, 578.076, 118.536, 0, 0, 0, 0, 598.517, 117.515, 0, 0, 0, 0, 621.652, 114.772, 0, 0, 0, 0, 653.708, 114.111, 0, 0, 0, 0, 678.7, 114.27, 0, 0, 0, 0, 704.302, 114.367, 0, 0, 0, 0, 740.093, 114.157, 0, 0, 0, 0, 766.015, 114.27, 0, 0, 0, 0, 786.576, 114.111, 0, 0, 0, 0, 812.4, 114.498, 0, 0, 0, 0, 834.911, 114.725, 0, 0, 0, 0, 867.171, 114.367, 0, 0, 0, 0, 896.303, 114.725, 0, 0, 0, 0, 923.081, 114.772, 0, 0, 0, 0, 932.457, 114.952, 0, 0, 0, 0, 963.153, 114.952, 0, 0, 0, 0, 978.723, 114.111, 0, 0, 0, 0, 1003.4, 114.952, 0, 0, 0, 0, 1031.37, 115.066, 0, 0, 0, 0, 1064.07, 114.772, 0, 0, 0, 0, 1109.13, 114.952, 0, 0, 0, 0, 1140.21, 114.451, 0, 0, 0, 0, 1156.88, 114.611, 0, 0, 0, 0, 1193.28, 113.856, 0, 0, 0, 0, 1236.66, 114.772, 0, 0, 0, 0, 1256.72, 114.111, 0, 0, 0, 0, 1297.6, 114.111, 0, 0, 0, 0, 1322.68, 114.366, 0, 0, 0, 0, 1348.48, 114.367, 0, 0, 0, 0, 1368.62, 115.131, 0, 0, 0, 0, 1405.94, 114.791, 0, 0, 0, 0, 1436.6, 115.813, 0, 0, 0, 0, 1461.13, 114.451, 0, 0, 0, 0, 1486.61, 114.757, 0, 0, 0, 0, 1512.11, 114.757, 0, 0, 0, 0, 1535.66, 114.367, 0, 0, 0, 0, 1557.21, 114.111, 0, 0, 0, 0, 1567.43, 114.111, 0, 0, 0, 0, 1590.41, 113.544, 0, 0, 0, 0, 1620.58, 113.43, 0, 0, 0, 0, 1638.97, 113.43, 0, 0, 0, 0, 1660.53, 115.212, 0, 0, 0, 0, 1674.22, 114.772, 0, 0, 0, 0, 1704.38, 115.472, 0, 0, 0, 0, 1727.7, 115.177, 0, 0, 0, 0, 1757.53, 114.111, 0, 0, 0, 0, 1788.32, 114.642, 0, 0, 0, 0, 1807.92, 115.177, 0, 0, 0, 0, 1830.61, 114.642, 0, 0, 0, 0, 1861.78, 114.791, 0, 0, 0, 0, 1882.45, 114.642, 0, 0, 0, 0, 1904.28, 114.415, 0, 0, 0, 0, 1934.33, 113.962, 0, 0, 0, 0, 1958.85, 113.96, 0, 0, 0, 0, 1990.24, 114.772, 0, 0, 0, 0, 2020.24, 116.232, 0, 0, 0, 0, 2045.75, 116.153, 0, 0, 0, 0, 2077.54, 117.368, 0, 0, 0, 0, 2104.49, 118.011, 0, 0, 0, 0, 2133.65, 119.217, 0, 0, 0, 0, 2156.67, 120.095, 0, 0, 0, 0, 2180.66, 121.6, 0, 0, 0, 0, 2206.84, 122.351, 0, 0, 0, 0, 2235.85, 122.621, 0, 0, 0, 0, 2264.2, 123.879, 0, 0, 0, 0, 2287.15, 124.453, 0, 0, 0, 0, 2309.44, 125.345, 0, 0, 0, 0, 2339.92, 127.51, 0, 0, 0, 0, 2354.83, 127.892, 0, 0, 0, 0, 2380.99, 129.77, 0, 0, 0, 0, 2403.02, 130.758, 0, 0, 0, 0, 2434.13, 133.515, 0, 0, 0, 0, 2466.84, 134.536, 0, 0, 0, 0, 2488.57, 136.633, 0, 0, 0, 0, 2505.12, 137.062, 0, 0, 0, 0, 2534.3, 138.962, 0, 0, 0, 0, 2557.89, 140.501, 0, 0, 0, 0, 2585.8, 143.92, 0, 0, 0, 0, 2604.93, 145.66, 0, 0, 0, 0, 2626.28, 149.855)
+}
+point_count = 100
+
+[sub_resource type="Curve2D" id="Curve2D_jyp26"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 47, 426, 0, 0, 0, 0, 54, 431, 0, 0, 0, 0, 64, 441, 0, 0, 0, 0, 72, 449, 0, 0, 0, 0, 81, 454, 0, 0, 0, 0, 92.2225, 460.478, 0, 0, 0, 0, 96, 465, 0, 0, 0, 0, 103.536, 471.085, 0, 0, 0, 0, 110.961, 478.156, 0, 0, 0, 0, 120.921, 484.4, 0, 0, 0, 0, 128.639, 489.116, 0, 0, 0, 0, 136.38, 495.103, 0, 0, 0, 0, 145.256, 502.198, 0, 0, 0, 0, 154.218, 510.563, 0, 0, 0, 0, 159.398, 512.097, 0, 0, 0, 0, 168.59, 515.279, 0, 0, 0, 0, 180, 521, 0, 0, 0, 0, 188, 524, 0, 0, 0, 0, 199.349, 528.714, 0, 0, 0, 0, 205.354, 531.968, 0, 0, 0, 0, 213.138, 532.603, 0, 0, 0, 0, 221, 535, 0, 0, 0, 0, 226.76, 537.914, 0, 0, 0, 0, 239, 540, 0, 0, 0, 0, 245.787, 542.671, 0, 0, 0, 0, 254.503, 545.684, 0, 0, 0, 0, 271, 550, 0, 0, 0, 0, 279.606, 552.048, 0, 0, 0, 0, 287, 553, 0, 0, 0, 0, 297.637, 553.816, 0, 0, 0, 0, 308.951, 554.523, 0, 0, 0, 0, 315.95, 554.563, 0, 0, 0, 0, 326, 558, 0, 0, 0, 0, 337.942, 560.887, 0, 0, 0, 0, 349.248, 564.077, 0, 0, 0, 0, 358.095, 567.251, 0, 0, 0, 0, 376.479, 569.726, 0, 0, 0, 0, 384, 570, 0, 0, 0, 0, 394.511, 573.615, 0, 0, 0, 0, 404, 576, 0, 0, 0, 0, 418.552, 575.029, 0, 0, 0, 0, 429.159, 575.383, 0, 0, 0, 0, 436, 578, 0, 0, 0, 0, 445.776, 576.797, 0, 0, 0, 0, 459.564, 576.797, 0, 0, 0, 0, 470.547, 574.78, 0, 0, 0, 0, 479, 577, 0, 0, 0, 0, 491, 578, 0, 0, 0, 0, 500.278, 574.78, 0, 0, 0, 0, 508, 576, 0, 0, 0, 0, 517.547, 578.565, 0, 0, 0, 0, 527.8, 576.443, 0, 0, 0, 0, 537.7, 577.858, 0, 0, 0, 0, 543.089, 575.969, 0, 0, 0, 0, 552, 576, 0, 0, 0, 0, 564.923, 578.918, 0, 0, 0, 0, 574.823, 582.1, 0, 0, 0, 0, 582.333, 583.104, 0, 0, 0, 0, 593.208, 582.454, 0, 0, 0, 0, 611, 583, 0, 0, 0, 0, 620.431, 582.807, 0, 0, 0, 0, 626, 580, 0, 0, 0, 0, 635, 583, 0, 0, 0, 0, 646.55, 584.293, 0, 0, 0, 0, 662, 585, 0, 0, 0, 0, 677.353, 586.343, 0, 0, 0, 0, 687, 584, 0, 0, 0, 0, 700, 584, 0, 0, 0, 0, 713, 582, 0, 0, 0, 0, 726, 582, 0, 0, 0, 0, 736, 581, 0, 0, 0, 0, 750.539, 580.333, 0, 0, 0, 0, 769, 581, 0, 0, 0, 0, 780, 581, 0, 0, 0, 0, 789.43, 580.686, 0, 0, 0, 0, 804, 580, 0, 0, 0, 0, 817.361, 578.565, 0, 0, 0, 0, 823, 578, 0, 0, 0, 0, 828.674, 576.797, 0, 0, 0, 0, 846, 577, 0, 0, 0, 0, 852.362, 576.797, 0, 0, 0, 0, 860.607, 577.158, 0, 0, 0, 0, 868, 575, 0, 0, 0, 0, 878.525, 572.908, 0, 0, 0, 0, 889.485, 569.372, 0, 0, 0, 0, 905, 569, 0, 0, 0, 0, 920, 568, 0, 0, 0, 0, 931.912, 568.312, 0, 0, 0, 0, 940.284, 567.644, 0, 0, 0, 0, 952.772, 567.251, 0, 0, 0, 0, 964.068, 566.455, 0, 0, 0, 0, 971.863, 564.776, 0, 0, 0, 0, 980.702, 563.008, 0, 0, 0, 0, 992.723, 559.119, 0, 0, 0, 0, 1000, 561, 0, 0, 0, 0, 1011, 555, 0, 0, 0, 0, 1021.36, 550.634, 0, 0, 0, 0, 1033.04, 547.428, 0, 0, 0, 0, 1041.51, 544.977, 0, 0, 0, 0, 1051.41, 542.502, 0, 0, 0, 0, 1060.61, 539.32, 0, 0, 0, 0, 1071, 537, 0, 0, 0, 0, 1078.28, 532.956, 0, 0, 0, 0, 1085.71, 526.946, 0, 0, 0, 0, 1091.31, 524.833, 0, 0, 0, 0, 1099.85, 521.643, 0, 0, 0, 0, 1104.09, 521.289, 0, 0, 0, 0, 1109, 517, 0, 0, 0, 0, 1110.46, 512.45, 0, 0, 0, 0, 1113.99, 505.733, 0, 0, 0, 0, 1122, 497, 0, 0, 0, 0, 1129.9, 491.59, 0, 0, 0, 0, 1141, 483, 0, 0, 0, 0, 1149.7, 476.741, 0, 0, 0, 0, 1159.25, 469.67, 0, 0, 0, 0, 1166, 464, 0, 0, 0, 0, 1171.97, 457.649, 0, 0, 0, 0, 1178.34, 450.932, 0, 0, 0, 0, 1184.07, 442.778, 0, 0, 0, 0, 1188.59, 436.083, 0, 0, 0, 0, 1196.72, 424.769, 0, 0, 0, 0, 1207, 414)
+}
+point_count = 122
+
+[sub_resource type="Curve2D" id="Curve2D_gd73t"]
+bake_interval = 200.0
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 127.981, 317, 0, 0, 0, 0, 140.604, 316.196, 0, 0, 0, 0, 152.454, 315.035, 0, 0, 0, 0, 164.225, 315.253, 0, 0, 0, 0, 177.174, 316.158, 0, 0, 0, 0, 186.429, 318.084, 0, 0, 0, 0, 205.06, 314, 0, 0, 0, 0, 217.609, 318.084, 0, 0, 0, 0, 232.231, 316.158, 0, 0, 0, 0, 245.954, 317.14, 0, 0, 0, 0, 254.703, 316.158, 0, 0, 0, 0, 261.118, 316, 0, 0, 0, 0, 277.134, 312, 0, 0, 0, 0, 288.472, 312.893, 0, 0, 0, 0, 305.266, 317.28, 0, 0, 0, 0, 320.124, 319.5, 0, 0, 0, 0, 334.193, 317, 0, 0, 0, 0, 349.087, 317.28, 0, 0, 0, 0, 365.225, 315, 0, 0, 0, 0, 374.234, 313, 0, 0, 0, 0, 390.515, 313.837, 0, 0, 0, 0, 401.897, 312.79, 0, 0, 0, 0, 411.774, 313.837, 0, 0, 0, 0, 426.287, 314, 0, 0, 0, 0, 437.852, 312.79, 0, 0, 0, 0, 447.309, 311, 0, 0, 0, 0, 455.317, 311, 0, 0, 0, 0, 464.326, 311, 0, 0, 0, 0, 475.551, 313.365, 0, 0, 0, 0, 491.786, 312.79, 0, 0, 0, 0, 500.363, 313, 0, 0, 0, 0, 516.505, 316.158, 0, 0, 0, 0, 534.604, 315.253, 0, 0, 0, 0, 548.777, 311.949, 0, 0, 0, 0, 561.426, 312, 0, 0, 0, 0, 573.815, 311.949, 0, 0, 0, 0, 583.263, 314.781, 0, 0, 0, 0, 596.282, 316.158, 0, 0, 0, 0, 604.995, 315.252, 0, 0, 0, 0, 617.75, 315.252, 0, 0, 0, 0, 627.671, 316.196, 0, 0, 0, 0, 634.501, 315, 0, 0, 0, 0, 643.733, 316.196, 0, 0, 0, 0, 654.599, 316.668, 0, 0, 0, 0, 662.63, 318.084, 0, 0, 0, 0, 672.688, 316.158, 0, 0, 0, 0, 680.582, 317.612, 0, 0, 0, 0, 692.865, 317.14, 0, 0, 0, 0, 703.731, 317.14, 0, 0, 0, 0, 712.015, 316.158, 0, 0, 0, 0, 724.99, 317.14, 0, 0, 0, 0, 737.109, 318.922, 0, 0, 0, 0, 748.618, 317, 0, 0, 0, 0, 758.512, 318.031, 0, 0, 0, 0, 771.89, 317.586, 0, 0, 0, 0, 778.578, 318.477, 0, 0, 0, 0, 786.173, 316.158, 0, 0, 0, 0, 794.665, 317, 0, 0, 0, 0, 804.441, 316.695, 0, 0, 0, 0, 811.575, 316.695, 0, 0, 0, 0, 818.69, 315, 0, 0, 0, 0, 824.696, 317, 0, 0, 0, 0, 832.979, 318.477, 0, 0, 0, 0, 838.983, 316.158, 0, 0, 0, 0, 845.018, 319.813, 0, 0, 0, 0, 851.707, 319.813, 0, 0, 0, 0, 859.208, 317.28, 0, 0, 0, 0, 869.742, 321, 0, 0, 0, 0, 885.759, 320, 0, 0, 0, 0, 895.769, 320, 0, 0, 0, 0, 904.778, 318, 0, 0, 0, 0, 914.58, 315.804, 0, 0, 0, 0, 927.065, 314.467, 0, 0, 0, 0, 937.861, 317.28, 0, 0, 0, 0, 945.793, 315.358, 0, 0, 0, 0, 957.833, 318, 0, 0, 0, 0, 969.872, 318.922, 0, 0, 0, 0, 979.682, 319.367, 0, 0, 0, 0, 989.866, 320, 0, 0, 0, 0, 1000.88, 318, 0, 0, 0, 0, 1009.56, 317.586, 0, 0, 0, 0, 1017.64, 318.403, 0, 0, 0, 0, 1030.07, 316.249, 0, 0, 0, 0, 1041.23, 317.28, 0, 0, 0, 0, 1051.47, 318.922, 0, 0, 0, 0, 1063.07, 321.149, 0, 0, 0, 0, 1074.95, 322, 0, 0, 0, 0, 1089.82, 322.04, 0, 0, 0, 0, 1104.98, 322.04, 0, 0, 0, 0, 1114.79, 323.376, 0, 0, 0, 0, 1121.01, 320.648, 0, 0, 0, 0, 1128.01, 323, 0, 0, 0, 0, 1145.11, 322.486, 0, 0, 0, 0, 1160.04, 324)
+}
+point_count = 94
+
+[sub_resource type="GDScript" id="GDScript_a2iyr"]
+script/source = "extends Timer
+
+# Reference to the creature that this timer will monitor
+var creature_node: Node2D
+
+# This function is called when the timer is ready
+func _ready():
+	if not is_connected(\"timeout\", Callable(self, \"_on_timeout\")):
+		connect(\"timeout\", Callable(self, \"_on_timeout\"))
+
+func set_creature(creature: Area2D):
+	# Store the creature reference for path recording or other purposes
+	self.creature = creature
+
+# This function is called whenever the timer times out
+func _on_timeout():
+	if creature_node:
+		print(\"DEBUG - Creature Path Points:\", creature_node.path_points)
+		print(\"DEBUG - Creature Current Path Index:\", creature_node.path_index)
+		print(\"DEBUG - Creature Global Position:\", creature_node.global_position)
+"
+
+[node name="Control" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_wi5g2")
+
+[node name="BoardPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 68.0
+offset_right = 153.0
+offset_bottom = 68.0
+mouse_filter = 1
+
+[node name="Lane1" type="Area2D" parent="BoardPanel"]
+position = Vector2(-90, -60)
+
+[node name="Lane1Collision" type="CollisionShape2D" parent="BoardPanel/Lane1"]
+position = Vector2(727.2, 170.8)
+shape = SubResource("RectangleShape2D_x58sr")
+
+[node name="Lane1ColorRect" type="ColorRect" parent="BoardPanel/Lane1/Lane1Collision"]
+visible = false
+offset_left = -361.0
+offset_top = -75.0
+offset_right = 358.0
+offset_bottom = 74.0
+mouse_filter = 2
+color = Color(0, 0.682353, 0.682353, 0.184314)
+
+[node name="Lane2" type="Area2D" parent="BoardPanel"]
+position = Vector2(-90, -60)
+
+[node name="Lane2Collision" type="CollisionShape2D" parent="BoardPanel/Lane2"]
+position = Vector2(727.2, 379.8)
+shape = SubResource("RectangleShape2D_bjdhq")
+debug_color = Color(0.580072, 0.53627, 0.372062, 0.42)
+
+[node name="Lane2ColorRect" type="ColorRect" parent="BoardPanel/Lane2/Lane2Collision"]
+visible = false
+offset_left = -304.0
+offset_top = -66.0
+offset_right = 303.0
+offset_bottom = 67.0
+mouse_filter = 2
+color = Color(0.764899, 0.543178, 0.338352, 0.184314)
+
+[node name="Lane3" type="Area2D" parent="BoardPanel"]
+position = Vector2(-90, -60)
+
+[node name="Lane3Collision" type="CollisionShape2D" parent="BoardPanel/Lane3"]
+position = Vector2(729.2, 605.8)
+shape = SubResource("RectangleShape2D_6l15b")
+debug_color = Color(0.555511, 0.508426, 0.647091, 0.42)
+
+[node name="Lane3ColorRect" type="ColorRect" parent="BoardPanel/Lane3/Lane3Collision"]
+visible = false
+offset_left = -361.0
+offset_top = -75.0
+offset_right = 358.0
+offset_bottom = 74.0
+mouse_filter = 2
+color = Color(0.880381, 0.33416, 0.853456, 0.184314)
+
+[node name="Wall1" type="StaticBody2D" parent="BoardPanel"]
+position = Vector2(357, 153)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Wall1Collision" type="CollisionShape2D" parent="BoardPanel/Wall1"]
+position = Vector2(287, 66.4)
+shape = SubResource("RectangleShape2D_y4cv1")
+debug_color = Color(0.823792, 0.359067, 0.466378, 0.42)
+
+[node name="ColorRect" type="ColorRect" parent="BoardPanel/Wall1/Wall1Collision"]
+offset_left = -466.0
+offset_top = -14.0
+offset_right = 465.0
+offset_bottom = 13.0
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="Wall2" type="StaticBody2D" parent="BoardPanel"]
+position = Vector2(359, 279)
+collision_layer = 5
+collision_mask = 5
+
+[node name="Wall2Collision" type="CollisionShape2D" parent="BoardPanel/Wall2"]
+position = Vector2(285, 142.4)
+shape = SubResource("RectangleShape2D_nvc4g")
+debug_color = Color(0.860568, 0.309346, 0.490285, 0.42)
+
+[node name="ColorRect" type="ColorRect" parent="BoardPanel/Wall2/Wall2Collision"]
+offset_left = -472.0
+offset_top = -20.0
+offset_right = 461.0
+offset_bottom = 14.0
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="BoardBoundary" type="StaticBody2D" parent="BoardPanel"]
+visible = false
+position = Vector2(-90, -60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/BoardBoundary"]
+z_index = -1
+position = Vector2(449, 280)
+shape = SubResource("RectangleShape2D_pgw5i")
+debug_color = Color(0.0430489, 0.139046, 0.112323, 0.0392157)
+
+[node name="AllySummonerShield" type="Area2D" parent="BoardPanel"]
+position = Vector2(0, 320)
+script = ExtResource("3_44vb1")
+
+[node name="AllySummonerShieldNode" type="Node2D" parent="BoardPanel/AllySummonerShield"]
+position = Vector2(-248, -181.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardPanel/AllySummonerShield"]
+position = Vector2(0.674988, -9.67499)
+scale = Vector2(0.469335, 0.469335)
+texture = ExtResource("3_kpku2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/AllySummonerShield"]
+shape = SubResource("CircleShape2D_lw1se")
+debug_color = Color(2.64719e-06, 0.63598, 0.410581, 0.42)
+
+[node name="HealthBar" parent="BoardPanel/AllySummonerShield" instance=ExtResource("5_810fe")]
+position = Vector2(33, -149)
+
+[node name="AllyInitialSummonZone2D" type="Area2D" parent="BoardPanel/AllySummonerShield"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/AllySummonerShield/AllyInitialSummonZone2D"]
+shape = SubResource("CircleShape2D_fd0tg")
+
+[node name="OpponentSummonerShield" type="Area2D" parent="BoardPanel"]
+position = Vector2(1281, 319.4)
+disable_mode = 2
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("4_14f5m")
+
+[node name="OpponentSummonerShieldNode" type="Node2D" parent="BoardPanel/OpponentSummonerShield"]
+z_index = 1
+position = Vector2(-1610, -651)
+
+[node name="Sprite2D" type="Sprite2D" parent="BoardPanel/OpponentSummonerShield"]
+position = Vector2(-4.97498, 4.02502)
+scale = Vector2(0.482644, 0.482644)
+texture = ExtResource("3_kpku2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/OpponentSummonerShield"]
+shape = SubResource("CircleShape2D_fndav")
+debug_color = Color(0.991325, 0.0883201, 0, 0.42)
+
+[node name="HealthBar" parent="BoardPanel/OpponentSummonerShield" instance=ExtResource("5_810fe")]
+position = Vector2(-39.8, -144.6)
+
+[node name="OpponentInitialSummonZone2D" type="Area2D" parent="BoardPanel/OpponentSummonerShield"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardPanel/OpponentSummonerShield/OpponentInitialSummonZone2D"]
+shape = SubResource("CircleShape2D_dsaeo")
+
+[node name="Creature" parent="BoardPanel" instance=ExtResource("6_xcgaw")]
+position = Vector2(-772, 728)
+collision_layer = 255
+collision_mask = 255
+
+[node name="Lane1Path" type="Path2D" parent="BoardPanel"]
+position = Vector2(-51.8, -230.2)
+scale = Vector2(0.489209, 2.9375)
+curve = SubResource("Curve2D_wp7va")
+
+[node name="Lane3Path" type="Path2D" parent="BoardPanel"]
+curve = SubResource("Curve2D_jyp26")
+
+[node name="Lane2Path" type="Path2D" parent="BoardPanel"]
+position = Vector2(0.149948, 0)
+scale = Vector2(0.998974, 1)
+curve = SubResource("Curve2D_gd73t")
+
+[node name="PathVisualizer" type="Node2D" parent="BoardPanel"]
+script = ExtResource("7_2ism6")
+
+[node name="DebugPathRecorder" type="Timer" parent="BoardPanel"]
+script = SubResource("GDScript_a2iyr")
+
+[node name="Hand" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 0.95
+offset_top = -57.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HandOpponent" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.048
+offset_top = -57.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="FusionMenu" parent="." instance=ExtResource("2_ekpmp")]
+
+[node name="DrawCardTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="DescriptiveBox" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_m8x22")
+
+[node name="CardPanel" type="Panel" parent="DescriptiveBox"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 673.0
+offset_right = 349.0
+offset_bottom = 896.0
+
+[node name="CardDetails" type="VBoxContainer" parent="DescriptiveBox/CardPanel"]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 3.0
+offset_right = 335.0
+offset_bottom = 219.0
+
+[node name="AttackLabel" type="Label" parent="DescriptiveBox/CardPanel/CardDetails"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="DescriptiveBox/CardPanel/CardDetails"]
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="DescriptiveBox/CardPanel/CardDetails"]
+layout_mode = 2
+
+[node name="ArmorLabel" type="Label" parent="DescriptiveBox/CardPanel/CardDetails"]
+layout_mode = 2
+
+[node name="AbilityLabel" type="Label" parent="DescriptiveBox/CardPanel/CardDetails"]
+layout_mode = 2
+
+[node name="ManaLabel" type="Label" parent="DescriptiveBox/CardPanel/CardDetails"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="DescriptiveBox/CardPanel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 117.0
+offset_bottom = 117.0
+
+[node name="CardImage" type="TextureRect" parent="DescriptiveBox/CardPanel/PanelContainer"]
+layout_mode = 2
+expand_mode = 5
+
+[connection signal="input_event" from="BoardPanel/Lane1" to="." method="_on_lane_1_input_event"]
+[connection signal="input_event" from="BoardPanel/Lane2" to="." method="_on_lane_2_input_event"]
+[connection signal="input_event" from="BoardPanel/Lane3" to="." method="_on_lane_3_input_event"]
+[connection signal="area_entered" from="BoardPanel/OpponentSummonerShield" to="BoardPanel/Creature" method="_on_opponent_summoner_shield_area_entered"]
+[connection signal="area_shape_entered" from="BoardPanel/Creature" to="BoardPanel/OpponentSummonerShield" method="_on_creature_area_shape_entered"]
+[connection signal="creature_clicked" from="BoardPanel/Creature" to="." method="_on_creature_creature_clicked"]
+[connection signal="input_event" from="BoardPanel/Creature" to="." method="_on_creature_input_event"]
+[connection signal="timeout" from="DrawCardTimer" to="." method="_on_draw_card_timer_timeout"]
